@@ -11,6 +11,7 @@ import { toUnmountPromise } from "./unmount.js";
 let beforeFirstMountFired = false;
 let firstMountFired = false;
 
+// 挂载app，执行mount生命周期函数，并更改app.status
 export function toMountPromise(appOrParcel, hardFail) {
   return Promise.resolve().then(() => {
     if (appOrParcel.status !== NOT_MOUNTED) {
@@ -27,6 +28,7 @@ export function toMountPromise(appOrParcel, hardFail) {
         appOrParcel.status = MOUNTED;
 
         if (!firstMountFired) {
+          // single-spa其实在不同的阶段提供了相应的自定义事件，让用户可以做一些事情
           window.dispatchEvent(new CustomEvent("single-spa:first-mount"));
           firstMountFired = true;
         }
