@@ -2,7 +2,7 @@ import Vue from "vue";
 import App from "./App.vue";
 import router from "./router";
 // import {registerApplication, start} from "single-spa"
-import { registerApplication, start } from "../../../../src/single-spa-bjke";
+import { registerApplication, start } from "../../../../src/single-spa";
 // window.__SINGLE_SPA_DEVTOOLS__ = {};
 global.__DEV__ = true;
 Vue.config.productionTip = false;
@@ -42,12 +42,12 @@ const apps = [
     // 传递给子应用的对象
     customProps: {},
   },
-  {
-    name: "app2",
-    app: loadApp("http://localhost:8082", "app2"),
-    activeWhen: (location) => location.pathname.startsWith("/app2"),
-    customProps: {},
-  },
+  // {
+  //   name: "app2",
+  //   app: loadApp("http://localhost:8082", "app2"),
+  //   activeWhen: (location) => location.pathname.startsWith("/app2"),
+  //   customProps: {},
+  // },
 ];
 // for (let i = 0; i < apps.length - 1; i++) {
 //   registerApplication(apps[i])

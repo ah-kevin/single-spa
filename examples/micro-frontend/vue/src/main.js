@@ -1,7 +1,8 @@
 import Vue from "vue";
 import App from "./App.vue";
 import router from "./router";
-import singleSpaVue from "single-spa-vue";
+// import singleSpaVue from "single-spa-vue";
+import singleSpaVue from "../../../../src/single-spa-vue";
 
 Vue.config.productionTip = false;
 const appOptions = {
