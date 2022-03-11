@@ -57,7 +57,9 @@
   ],
   "author": "Joel Denning",
   "license": "MIT",
-  "dependencies": {},
+  "dependencies": {
+    "css.escape": "^1.5.1"
+  },
   "devDependencies": {
     "@babel/core": "^7.9.0",
     "@babel/eslint-parser": "^7.11.5",
