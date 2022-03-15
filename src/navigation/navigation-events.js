@@ -8,6 +8,10 @@ import { isStarted } from "../start.js";
  * that application navigation listeners are not called until
  * single-spa has ensured that the correct applications are
  * unmounted and mounted.
+ *  我们捕获导航事件侦听器，以便我们可以确保
+ * 应用程序导航侦听器不会被调用，直到
+ * single - spa 已确保正确的应用程序是
+ * 卸载和安装。
  */
 const capturedEventListeners = {
   hashchange: [],

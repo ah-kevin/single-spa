@@ -1,4 +1,5 @@
-import * as singleSpa from "single-spa";
+// import * as singleSpa from "single-spa";
+import * as singleSpa from "../../src/single-spa";
 
 function hrefWithoutHash() {
   return location.href.indexOf("#") >= 0
